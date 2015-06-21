@@ -67,7 +67,7 @@ Rivets =
     init: (component, el, data = {}) ->
       el ?= document.createElement 'div'
       component = Rivets.public.components[component]
-      if typeof component.template isnt 'undefined'
+      if component.template isnt undefined
         template = component.template.call @, el
         if template instanceof HTMLElement
          while el.firstChild
